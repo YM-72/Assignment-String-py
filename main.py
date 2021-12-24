@@ -4,17 +4,21 @@ __human_name__ = 'strings'
 
 # Add your code after this line
 
+
 player1='Ruud Gullit'
 player2='Marco Van Basten'
 
 goal_0 = 32
 goal_1 = 54
 
-scorers = player1 + ' '+  str(goal_0) , player2 + ' '+ str(goal_1)
+scorers = f'{player1} {goal_0}, {player2} {goal_1}'
 
 
 
-report = player1 + ' scored in the ' + str(goal_0)+'nd'+ ' ' + 'minute\n' + player2 + ' scored in the ' + str(goal_1)+'nd ' + 'minute'
+report = f'{player1} scored in the {goal_0} minute\n{player2} scorde in the {goal_1}nd minute.'
+
+print(report)
+
 
 
 
@@ -27,10 +31,13 @@ last_name_len =len(player[player.find(' '):])
 
 name_short = name_short = player[0] + '.' + player[player.find(' '):]
 
-chant = (player[0:player.find(' ')] + '!\t') * 3
+chant = (len(first_name)-1)*(first_name+'! ')+(first_name+'!')
 
-good_chant = 1
+good_chant = (player[0:player.find(' ')] + '! ') * 5
 
+print(chant)
+print(good_chant)
+print(good_chant != chant)
 
 
 x = ["apple", "banana"]
